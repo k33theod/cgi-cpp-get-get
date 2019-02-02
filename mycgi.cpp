@@ -22,8 +22,9 @@ int main()
   	cout << "<h1>Hello world apo Θοδωρή</h1>";
 	string cppstring; //here will go the query string
 	
+	//check for post or get if data_l means post
 	char *data_l = getenv("CONTENT_LENGTH");
-	if (data_l) //check for post or get if data_l means post 
+	if (data_l)  
 	{
 		int data_le = stoi(data_l);
 		char *data = new char [data_le];
