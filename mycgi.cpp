@@ -17,10 +17,28 @@ int main()
 	cout <<"<meta charset='UTF-8'>"<< endl;
 	cout <<"<head>" << endl;
 	
-  	char* myString = getenv("QUERY_STRING");
-	string cppstring = myString;
-	
-	cout << "<p>The \"QUERY_STRING\" environment variable is " << cppstring << "</p>" << endl;
+  	cout << "<h1>Hello world apo Θοδωρή</h1>";
+	string cppstring;
+	char *data_l = getenv("CONTENT_LENGTH");
+	if (data_l)
+	{
+		int data_le {};
+		data_le = stoi(data_l);
+		char *data;
+		data = new char [data_le];
+		cin >> data;
+		cppstring =data;
+		delete []data;
+		cout << "<p>DATA : "<<cppstring  <<" :are comming from POST</p>";
+	}
+	else
+	{
+		char* myString = getenv("QUERY_STRING");
+		cppstring= myString;
+		delete myString;
+		cout << "<p>DATA : " << cppstring << " :are comming from get</p>";
+
+	}
 	
 	map <string,string> params = get_key_values(get_params (cppstring));
   	
