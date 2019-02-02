@@ -22,10 +22,8 @@ int main()
 	char *data_l = getenv("CONTENT_LENGTH");
 	if (data_l)
 	{
-		int data_le {};
-		data_le = stoi(data_l);
-		char *data;
-		data = new char [data_le];
+		int data_le = stoi(data_l);
+		char *data = new char [data_le];
 		cin >> data;
 		cppstring =data;
 		delete []data;
