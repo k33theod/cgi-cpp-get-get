@@ -1,6 +1,6 @@
 # cgi-cpp-get-get
 
-Simple cpp method get cgi.
+Simple cpp method get post cgi.
 
 Creates a cpp map object with keys the form input names and values their values.
 
