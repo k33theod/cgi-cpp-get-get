@@ -1,6 +1,6 @@
-# cgi-cpp-get-get
+# cgi-cpp-get-post
 
-Simple cpp method get post cgi.
+Simple cpp example to catch get post data with .cgi.
 
 Creates a cpp map object with keys the form input names and values their values.
 
